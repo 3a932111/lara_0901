@@ -18,7 +18,7 @@ return new class extends Migration
 
             $table->string('title');
             $table->text('content');
-
+            $table->boolean('is_feature');
             $table->timestamps();
         });
     }
