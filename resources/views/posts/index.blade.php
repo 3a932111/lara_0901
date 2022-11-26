@@ -34,14 +34,14 @@
                     @foreach($posts->chunk(2) as $chunks)
                     <div class="col-lg-6">
 
-                        @foreach($chunks as $post)
+                        @foreach($posts as $post)
                             <!-- Blog post-->
                             <div class="card mb-4">
                                 <a href="{{ route('posts.show', $post->id) }}">
                                     <img class="card-img-top" src="https://dummyimage.com/700x350/dee2e6/6c757d.jpg" alt="..."/>
                                 </a>
                                 <div class="card-body">
-                                    <div class="small text-muted">{{ $post->updated_at->diffForHumans() }}</div>
+                                    <div class="small text-muted">{{ $post->title }}</div>
                                     <h2 class="card-title h4">{{ Str::limit($post->title, 10) }}</h2>
                                     <p class="card-text">
                                         {{ Str::limit($post->content, 30) }}
